@@ -1,24 +1,42 @@
-/* ===========================
-Index Of css
-========================== */
-/*======================================
-    Variables
-========================================*/
-/*======================================
-    Normalize CSS
-========================================*/
+@font-face {
+  font-family: 'promptbold';
+  src: url('../fonts/prompt-bold-webfont.woff2') format('woff2'),
+    url('../fonts/prompt-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'promptmedium';
+  src: url('../fonts/prompt-medium-webfont.woff2') format('woff2'),
+    url('../fonts/prompt-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'promptregular';
+  src: url('../fonts/prompt-regular-webfont.woff2') format('woff2'),
+    url('../fonts/prompt-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Spartan", sans-serif;
+  font-family: "promptmedium", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #6e657e;
+  color: #f5f5f5;
   overflow-x: hidden;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 p {
@@ -68,7 +86,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 400;
   margin: 0px;
   color: #081828;
 }
@@ -83,27 +101,27 @@ h6 a {
 }
 
 h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
   font-size: 30px;
 }
 
-h4 {
-  font-size: 25px;
+h2 {
+  font-size: 26px;
 }
 
-h5 {
+h3 {
+  font-size: 22px;
+}
+
+h4 {
   font-size: 20px;
 }
 
-h6 {
+h5 {
   font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
 }
 
 ul,
@@ -1010,7 +1028,7 @@ ol {
   bottom: -1px;
   height: 2px;
   width: 50px;
-  background: #3763EB;
+  background: #4a2600;
   content: "";
 }
 
@@ -1029,7 +1047,7 @@ ol {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background: #3763EB;
+  background: #4a2600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,7 +1451,8 @@ ol {
 }
 
 .sticky .navbar .navbar-nav .nav-item a.active {
-  color: #3763EB;
+  color: #4a2600;
+  text-decoration: underline;
 }
 
 .sticky .navbar .navbar-toggler .toggler-icon {
@@ -1465,7 +1484,8 @@ ol {
 }
 
 .navbar-brand img {
-  width: 150px;
+  width: 120px;
+  padding: 5px 0;
 }
 
 .navbar-toggler {
@@ -1539,15 +1559,16 @@ ol {
 }
 
 .navbar-nav .nav-item a {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: #000;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  padding: 30px 0;
+  padding: 5px 10px;
   position: relative;
   text-transform: capitalize;
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar-nav .nav-item a {
@@ -1565,7 +1586,7 @@ ol {
   }
 }
 
-.navbar-nav .nav-item a::before {
+/* .navbar-nav .nav-item a::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1577,9 +1598,9 @@ ol {
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   z-index: 5;
-}
+} */
 
-.navbar-nav .nav-item a::before {
+/* .navbar-nav .nav-item a::before {
   width: 0%;
   left: 0;
 }
@@ -1587,11 +1608,12 @@ ol {
 .navbar-nav .nav-item a::after {
   width: 20%;
   right: 0;
-}
+} */
 
 .navbar-nav .nav-item a:hover,
 .navbar-nav .nav-item a.active {
-  color: #3763EB;
+  color: #4a2600;
+  text-decoration: underline;
 }
 
 .navbar-nav .nav-item:hover a:before,
@@ -1710,6 +1732,7 @@ ol {
 
 .header {
   position: relative;
+  height: 100px;
 }
 
 /* Header Button */
@@ -3752,9 +3775,10 @@ blockquote span {
 	Footer CSS
 ========================================*/
 .footer {
-  background-color: #081828;
-  z-index: 2;
-  position: relative;
+  z-index: 1;
+  background-image: url("../images/bg-footer.jpg");
+  background-size: 100% auto;
+  background-position: top center ;
 }
 
 .footer .logo {
@@ -5140,4 +5164,70 @@ blockquote span {
 .free-version-banner .button .btn {
   background-color: #fff;
   color: #3763EB;
+}
+
+
+.icon-flag{
+  max-width: 20px;
+}
+
+.btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.bg-light-2{
+  background-color: #d6d6d6;
+}
+
+.margin-spacer{
+  margin: 30px 0;
+}
+
+.bg-white-400{
+  background-color: #ffffff9c;
+}
+
+.text-brown{
+  color: #4a2600;
+}
+
+.box-img {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 66.6%;
+  /* z-index: 999; */
+  transition: all 0.7s;
+  background: #4a2600;
+}
+
+.box-img img {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bg-gray{
+  background-image: linear-gradient(#fff, #ebebec,#ebebec, #aeaeae);
+}
+
+.card.bg-gray:hover{
+  transition: 0.5s;
+  background-image: linear-gradient(#ebebec, #ebebec,#cccccc, #888888);
+}
+
+.header-text{
+  background-color: #4a2600;
+  padding: 30px 0;
+}
+
+.text-indent{
+  text-indent: 1.5rem;
 }
