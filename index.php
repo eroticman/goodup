@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-sub">
+                        <a href="services-detail">
                             <div class="row g-0">
                                 <div class="col-6">
                                     <div class="box-img">
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-sub">
+                        <a href="services-detail">
                             <div class="row g-0">
                                 <div class="col-6 my-auto mx-auto text-center">
                                     <h3 class="text-brown lh-base">ออกแบบ ตัดเย็บ<br>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-sub">
+                        <a href="services-detail">
                             <div class="row g-0">
                                 <div class="col-6">
                                     <div class="box-img">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-sub">
+                        <a href="services-detail">
                             <div class="row g-0">
                                 <div class="col-6 my-auto mx-auto text-center">
                                     <h3 class="text-brown lh-base">ซ่อม ประกอบ<br>

@@ -39,7 +39,7 @@
             <div class="card shadow rounded-lg mb-3 overflow-hidden">
                 <div class="row">
                     <div class="col-md-5">
-                        <img src="assets/images/aboutus.jpg" class="d-block w-100 shadow rounded-lg" alt="banner">
+                        <img src="assets/images/aboutus.jpg" class="d-block w-100 border-right" alt="banner">
                     </div>
                     <div class="col-md-7 my-auto">
                         <div class="p-2">
