@@ -8,6 +8,7 @@
     <meta name="description" content="Goodup - งามหุ้มฉนวน แจ็คเก็ต เพื่อกันความร้อน ความเย็นและเสียง" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
+    <meta property="og:image" content="https://www.goodup.co.th/assets/images/logo.png" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Web Font -->
@@ -92,12 +93,69 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="box-img overflow-hidden rounded detail shadow">
+                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (61).jpg"
+                            rel="services-1">
+                            <img src="assets/images/services/img (61).jpg" class="img-fluid shadow zoom img-thumbnail"
+                                alt="services">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="box-img overflow-hidden rounded detail shadow">
+                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (62).jpg"
+                            rel="services-1">
+                            <img src="assets/images/services/img (62).jpg" class="img-fluid shadow zoom img-thumbnail"
+                                alt="services">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="box-img overflow-hidden rounded detail shadow">
+                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (63).jpg"
+                            rel="services-1">
+                            <img src="assets/images/services/img (63).jpg" class="img-fluid shadow zoom img-thumbnail"
+                                alt="services">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="box-img overflow-hidden rounded detail shadow">
+                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (64).jpg"
+                            rel="services-1">
+                            <img src="assets/images/services/img (64).jpg" class="img-fluid shadow zoom img-thumbnail"
+                                alt="services">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="box-img overflow-hidden rounded detail shadow">
+                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (65).jpg"
+                            rel="services-1">
+                            <img src="assets/images/services/img (65).jpg" class="img-fluid shadow zoom img-thumbnail"
+                                alt="services">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="box-img overflow-hidden rounded detail shadow">
+                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (66).jpg"
+                            rel="services-1">
+                            <img src="assets/images/services/img (66).jpg" class="img-fluid shadow zoom img-thumbnail"
+                                alt="services">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <?php include 'footer.php'; ?>
 
     <!-- ========================= JS here ========================= -->
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/count-up.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
@@ -116,6 +174,15 @@
             'autoplayVideos': true,
         });
     </script>
+    <!-- Initiate Portoflio Script -->
+    <script src="extensions/portfolio/isotope.min.js"></script>
+    <script src="extensions/portfolio/portfolio.js"></script>
+
+    <script type="text/javascript" src="extensions/fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="extensions/fancybox/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="extensions/fancybox/jquery.fancybox.css" media="screen" />
+    <script type="text/javascript" src="extensions/fancybox/jquery.fancybox-media.js"></script>
+
 </body>
 
 </html>

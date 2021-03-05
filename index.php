@@ -8,6 +8,7 @@
     <meta name="description" content="Goodup - งามหุ้มฉนวน แจ็คเก็ต เพื่อกันความร้อน ความเย็นและเสียง" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
+    <meta property="og:image" content="https://www.goodup.co.th/assets/images/logo.png" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Web Font -->
