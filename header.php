@@ -40,14 +40,14 @@
                                     </li>
                                     <li class="nav-item">
                                         <div class="dropdown">
-                                            <a class="btn btn-light bg-light-2 dropdown-toggle" href="#" role="button"
+                                            <a class="btn btn-light bg-light-2 px-2 dropdown-toggle d-lg-inline d-block text-lg-center text-left" href="#" role="button"
                                                 id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
                                                 <img class="icon-flag" src="assets/images/th.png" alt="Logo"/> ไทย
                                             </a>
 
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <li><a class="dropdown-item" href="#"><img class="icon-flag" src="assets/images/th.png" alt="Logo"/> ไทย</a></li>
-                                                <li><a class="dropdown-item" href="#"><img class="icon-flag" src="assets/images/en.png" alt="Logo"/> อังกฤษ</a></li>
+                                                <li class="px-2 bg-light border-bottom"><a class="dropdown-item" href="#"><img class="icon-flag" src="assets/images/th.png" alt="Logo"/> ไทย</a></li>
+                                                <li class="px-2 bg-light"><a class="dropdown-item" href="#"><img class="icon-flag" src="assets/images/en.png" alt="Logo"/> อังกฤษ</a></li>
                                             </ul>
                                         </div>
                                     </li>

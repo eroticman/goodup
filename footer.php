@@ -8,8 +8,8 @@
                         <h3 class="text-brown">91 ซอยรังสิต-นครนายก 25 แยก 1 ต. ประชาธิปัตย์ อ. ธัญบุรี จ. ปทุมธานี 12130</h3>
                     </div>
                     <div class="col-12 text-center">
-                        <h3 class="text-brown d-inline"> <i class="fab fa-line pr-1"></i><a href="tel:021995055">02 199 5055</a>, <a href="tel:0824379999">082 437 9999</a>, <a href="tel:0849562222">084 956 2222</a></h3>
-                        <h3 class="text-brown d-inline pl-3"> <i class="fas fa-envelope pr-1"></i><a href="mailto:goodup2001@gmail.com">goodup2001@gmail.com</a></h3>
+                        <h3 class="text-brown d-md-inline d-block lh-base"> <i class="fab fa-line pr-1"></i><a href="tel:021995055">02 199 5055</a>, <a href="tel:0824379999">082 437 9999</a>, <a href="tel:0849562222">084 956 2222</a></h3>
+                        <h3 class="text-brown d-md-inline d-block lh-base pl-3"> <i class="fas fa-envelope pr-1"></i><a href="mailto:goodup2001@gmail.com">goodup2001@gmail.com</a></h3>
                     </div>
                 </div>
             </div>

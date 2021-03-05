@@ -38,11 +38,11 @@
         <div class="container">
             <div class="card shadow rounded-lg mb-3 overflow-hidden">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <img src="assets/images/aboutus.jpg" class="d-block w-100 border-right" alt="banner">
                     </div>
-                    <div class="col-md-7 my-auto">
-                        <div class="p-2">
+                    <div class="col-lg-7 my-auto">
+                        <div class="p-lg-2 p-md-3 p-3">
                             <h3 class="lh-base mb-2 text-dark">ประวัติความเป็นมา</h3>
                             <h1 class="lh-base mb-2 text-brown font-weight-bold">GOOD UP CO.,LTD.</h1>
                             <h5 class="text-dark lh-base mb-3 text-indent">

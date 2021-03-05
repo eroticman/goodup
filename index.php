@@ -64,7 +64,7 @@
                 <div class="col-12 text-center mb-3">
                     <h2 class="text-brown font-weight-bold">งานที่บริการ</h2>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-12">
                     <div class="card mb-3 overflow-hidden bg-gray">
                         <a href="services-detail">
                             <div class="row g-0">
@@ -83,7 +83,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-12">
                     <div class="card mb-3 overflow-hidden bg-gray">
                         <a href="services-detail">
                             <div class="row g-0">
@@ -101,7 +101,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-12">
                     <div class="card mb-3 overflow-hidden bg-gray">
                         <a href="services-detail">
                             <div class="row g-0">
@@ -120,7 +120,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-12">
                     <div class="card mb-3 overflow-hidden bg-gray">
                         <a href="services-detail">
                             <div class="row g-0">
