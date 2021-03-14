@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="th">
+<?php include 'lang.php'; ?>
 
 <head>
     <meta charset="utf-8" />

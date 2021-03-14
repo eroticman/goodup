@@ -1,4 +1,5 @@
 <?php 
+    include 'lang.php';
     include 'config/init.php';
     $id = $_GET['id'];
 	$categoryDetail = category_detail($id);

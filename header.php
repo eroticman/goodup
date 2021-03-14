@@ -9,7 +9,6 @@
         </div>
     </div>
     <!-- /End Preloader -->
-    <?php $current_page = basename($_SERVER['PHP_SELF'],'.php'); ?>
     <!-- Start Header Area -->
     <header class="header">
         <div class="navbar-area">
@@ -31,12 +30,12 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="<?php echo($current_page == 'index') ? 'active' : ''?>" href="index">หน้าแรก</a></li>
+                                        <a class="<?php echo($current_page == 'index') ? 'active' : ''?>" href="index<?php echo $langCurrent ?>"><?php echo $home ?></a></li>
                                     <li class="nav-item">
-                                        <a class="<?php echo($current_page == 'aboutus') ? 'active' : ''?>" href="aboutus">เกี่ยวกับเรา</a>
+                                        <a class="<?php echo($current_page == 'aboutus') ? 'active' : ''?>" href="aboutus<?php echo $langCurrent ?>"><?php echo $aboutus ?></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="<?php echo($current_page == 'services' or $current_page == 'services-detail') ? 'active' : ''?>" href="services">งานที่เราบริการ</a>
+                                        <a class="<?php echo($current_page == 'services' or $current_page == 'services-detail') ? 'active' : ''?>" href="services<?php echo $langCurrent ?>"><?php echo $services ?></a>
                                     </li>
                                     <li class="nav-item">
                                         <div class="dropdown">
@@ -46,8 +45,8 @@
                                             </a>
 
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <li class="px-2 bg-light border-bottom"><a class="dropdown-item" href="#"><img class="icon-flag" src="assets/images/th.png" alt="Logo"/> ไทย</a></li>
-                                                <li class="px-2 bg-light"><a class="dropdown-item" href="#"><img class="icon-flag" src="assets/images/en.png" alt="Logo"/> อังกฤษ</a></li>
+                                                <li class="px-2 bg-light border-bottom"><a class="dropdown-item" href="<?php echo $linkLang.'lang=th' ?>"><img class="icon-flag" src="assets/images/th.png" alt="Logo"/> ไทย</a></li>
+                                                <li class="px-2 bg-light"><a class="dropdown-item" href="<?php echo $linkLang.'lang=en' ?>"><img class="icon-flag" src="assets/images/en.png" alt="Logo"/> อังกฤษ</a></li>
                                             </ul>
                                         </div>
                                     </li>

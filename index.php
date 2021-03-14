@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="th">
-
+<?php include 'lang.php'; ?>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -99,7 +99,7 @@
                                         </div>
                                     </div>
                                     <div class="col-6 my-auto mx-auto text-center">
-                                        <h3 class="text-brown lh-base"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
+                                        <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
                                     </div>
                                 </div>
 
@@ -112,7 +112,7 @@
                             <a href="services-detail">
                                 <div class="row g-0">
                                     <div class="col-6 my-auto mx-auto text-center">
-                                        <h3 class="text-brown lh-base"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
+                                        <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
                                     </div>
                                     <div class="col-6">
                                         <div class="box-img">
