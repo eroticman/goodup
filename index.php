@@ -91,7 +91,7 @@
                 <?php if ($i %2 == 1) : ?>
                     <div class="col-lg-6 col-12">
                         <div class="card mb-3 overflow-hidden bg-gray">
-                            <a href="services-detail?id=<?php echo $categoryDetail->id; ?>">
+                            <a href="services-detail?id=<?php echo $categoryDetail->id?><?php echo($langCurrent == null) ? '': '&'.$langCurrent; ?>">
                                 <div class="row g-0">
                                     <div class="col-6">
                                         <div class="box-img">
@@ -109,7 +109,7 @@
                 <?php else : ?>
                     <div class="col-lg-6 col-12">
                         <div class="card mb-3 overflow-hidden bg-gray">
-                            <a href="services-detail">
+                            <a href="services-detail?id=<?php echo $categoryDetail->id?><?php echo($langCurrent == null) ? '': '&'.$langCurrent; ?>">
                                 <div class="row g-0">
                                     <div class="col-6 my-auto mx-auto text-center">
                                         <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
