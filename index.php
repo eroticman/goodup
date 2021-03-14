@@ -38,13 +38,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/images/banner.jpg" class="d-block w-100" alt="banner">
+                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="banner">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/banner.jpg" class="d-block w-100" alt="banner">
+                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="banner">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/banner.jpg" class="d-block w-100" alt="banner">
+                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="banner">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
