@@ -36,7 +36,7 @@
     <!-- Banner Slide -->
     <section class="header-text">
         <div class="container">
-            <h2 class="text-white">งานที่บริการ</h2>
+            <h2 class="text-white"><?php echo $service ?></h2>
         </div>
     </section>
 
