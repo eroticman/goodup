@@ -53,14 +53,14 @@
                             </div>
                             <div class="card-body text-left">
                                 <h3 class="text-brown lh-base mb-2">
-                                    <?php if (!empty( $_GET['lang'] ) && $_GET['lang'] == 'en') : ?>
+                                    <?php if (!empty( $_GET['lang'] ) && $_GET['lang'] == 'th') : ?>
                                         <?php echo  $categoryDetail->category_name; ?>
                                         <br>( <?php echo  $categoryDetail->category_name_en; ?> )
                                     <?php else : ?>
                                         <?php echo  $categoryDetail->category_name_en; ?>
                                     <?php endif ?>
                                 </h3>
-                                <h5 class="lh-base text-indent"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->description_en : $categoryDetail->description; ?></h5>
+                                <h5 class="lh-base text-indent"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->description_en : $categoryDetail->description; ?></h5>
                             </div>
                         </a>
                     </div>
