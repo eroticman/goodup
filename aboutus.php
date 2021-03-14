@@ -37,7 +37,7 @@
     <!-- Banner Slide -->
     <section class="header-text">
         <div class="container">
-            <h2 class="text-white">เกี่ยวกับเรา</h2>
+            <h2 class="text-white"><?php echo $aboutus ?></h2>
         </div>
     </section>
 
@@ -50,10 +50,33 @@
                     </div>
                     <div class="col-lg-7 my-auto">
                         <div class="p-lg-2 p-md-3 p-3">
-                            <h3 class="lh-base mb-2 text-dark">ประวัติความเป็นมา</h3>
-                            <h1 class="lh-base mb-2 text-brown font-weight-bold"><?php echo $aboutList[0]->about_name; ?></h1>
+                            <h3 class="lh-base mb-2 text-dark"><?php echo $history ?></h3>
+                            <h1 class="lh-base mb-2 text-brown font-weight-bold">
+                                <?php echo $aboutList[0]->about_name; ?></h1>
                             <h5 class="text-dark lh-base mb-3 text-indent">
-                                <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $aboutList[0]->history_desc_en : $aboutList[0]->history_desc; ?>
+                                <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $aboutList[0]->history_desc_en : $aboutList[0]->history_desc; ?>
+                                <!-- <p>
+                                    The company opened up. In 2004, working in the Insulation and Ducting Contractors.
+                                    Many years later, has grown to a widening of Insulation installation and Ducting
+                                    works until the present Good up company Limited There are a number of co-operating
+                                    partners have jointly grow and expand the scope of the contract. Example, the
+                                    overhaul work. Assembly machines Installation of equipment installed pipe hydraulic
+                                    pipe steam system. Ducting & ventilation system. The team with specialized
+                                    expertise. By the torch control of the company, Good up limited.
+                                </p>
+                                <p>
+                                    - Established on : 30 Nov 2004</p>
+                                <p> - Location at : 91 SoiRangsit - Nakronnayok 25 , TombonPrachatipat, <br>Amphur
+                                    Thanyaburi ,Pathumthani 12130</p>
+                                <p> - Telephone : <a href="tel:021995055">( 02 ) 199 - 5055</a> , <a
+                                        href="tel:0824379999">082-437-9999</a> , <a
+                                        href="tel:0849562222">084-956-2222</a></p>
+                                <p> - E – MAIL : goodup2001@gmail.com</p>
+                                <p> - Website : www.goodup.co.th</p>
+                                <p> - Register No : 0135547011222</p>
+                                <p> - Authorized capital : 3,000,000 Baht .</p>
+                                <p> - Bank Service : KASIKORN THAI PUBLIC COMPANY LIMITED.
+                                </p> -->
                             </h5>
                         </div>
                     </div>
@@ -62,9 +85,9 @@
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="card p-3 shadow rounded-lg">
-                        <h3 class="text-brown lh-base mb-3 font-weight-bold">พันธกิจ (Mission)</h3>
+                        <h3 class="text-brown lh-base mb-3 font-weight-bold"><?php echo $mission ?></h3>
                         <h5 class="text-dark lh-base text-indent">
-                            <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $aboutList[0]->mission_desc_en : $aboutList[0]->mission_desc; ?>
+                            <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $aboutList[0]->mission_desc_en : $aboutList[0]->mission_desc; ?>
                         </h5>
                     </div>
                 </div>
@@ -72,25 +95,27 @@
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="card p-3 shadow rounded-lg">
-                        <h3 class="text-brown lh-base mb-3 font-weight-bold">นโยบาย (Policy)</h3>
+                        <h3 class="text-brown lh-base mb-3 font-weight-bold"><?php echo $policy ?></h3>
                         <h5 class="text-dark lh-base text-indent">
-                            <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $aboutList[0]->policy_desc_en : $aboutList[0]->policy_desc; ?>
+                            <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $aboutList[0]->policy_desc_en : $aboutList[0]->policy_desc; ?>
                         </h5>
                     </div>
                 </div>
             </div>
             <div class="row">
-            <?php foreach ($aboutImgList as $aboutImgDetail) : ?>
+                <?php foreach ($aboutImgList as $aboutImgDetail) : ?>
                 <div class="col-lg-4 col-md-6 col-12 mb-3">
                     <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="img/about_us/<?php echo $aboutImgDetail->about_id; ?>/<?php echo $aboutImgDetail->img_name; ?>"
+                        <a class="fancybox-pop fancybox.image"
+                            href="img/about_us/<?php echo $aboutImgDetail->about_id; ?>/<?php echo $aboutImgDetail->img_name; ?>"
                             rel="services-1">
-                            <img src="img/about_us/<?php echo $aboutImgDetail->about_id; ?>/<?php echo $aboutImgDetail->img_name; ?>" class="img-fluid shadow zoom img-thumbnail"
+                            <img src="img/about_us/<?php echo $aboutImgDetail->about_id; ?>/<?php echo $aboutImgDetail->img_name; ?>"
+                                class="img-fluid shadow zoom img-thumbnail"
                                 alt="<?php echo $aboutList[0]->about_name; ?>">
                         </a>
                     </div>
                 </div>
-            <?php endforeach ?>
+                <?php endforeach ?>
             </div>
         </div>
     </section>

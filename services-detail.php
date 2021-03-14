@@ -11,8 +11,8 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>GoodUp - <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></title>
-    <meta name="description" content="Goodup - <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>" />
+    <title>GoodUp - <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></title>
+    <meta name="description" content="Goodup - <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>" />
     <meta name="keywords" content="<?php echo  $categoryDetail->keyword; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
@@ -39,7 +39,7 @@
     <!-- Banner Slide -->
     <section class="header-text">
         <div class="container">
-            <h2 class="text-white"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h2>
+            <h2 class="text-white"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h2>
         </div>
     </section>
 
@@ -49,11 +49,11 @@
                 <?php foreach ($serviceList as $serviceDetail) : ?>
                     <div class="col-lg-4 col-md-6 col-12 mb-3">
                         <div class="box-img overflow-hidden rounded detail shadow">
-                            <a title="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $serviceDetail->service_name_en : $serviceDetail->service_name; ?>"
+                            <a title="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $serviceDetail->service_name_en : $serviceDetail->service_name; ?>"
                                 class="fancybox-pop fancybox.image" href="img/service/<?php echo $serviceDetail->id; ?>/<?php echo $serviceDetail->img_cover; ?>"
                                 rel="services-1">
                                 <img src="img/service/<?php echo $serviceDetail->id; ?>/<?php echo $serviceDetail->img_cover; ?>" class="img-fluid shadow zoom img-thumbnail"
-                                    alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $serviceDetail->service_name_en : $serviceDetail->service_name; ?>">
+                                    alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $serviceDetail->service_name_en : $serviceDetail->service_name; ?>">
                             </a>
                         </div>
                     </div>

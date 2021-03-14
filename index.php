@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-3">
-                    <h2 class="text-brown font-weight-bold">งานที่บริการ</h2>
+                    <h2 class="text-brown font-weight-bold"><?php echo $service ?></h2>
                 </div>
                 <?php 
                     $i == 0;
@@ -91,15 +91,15 @@
                 <?php if ($i %2 == 1) : ?>
                     <div class="col-lg-6 col-12">
                         <div class="card mb-3 overflow-hidden bg-gray">
-                            <a href="services-detail">
+                            <a href="services-detail?id=<?php echo $categoryDetail->id; ?>">
                                 <div class="row g-0">
                                     <div class="col-6">
                                         <div class="box-img">
-                                            <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
+                                            <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
                                         </div>
                                     </div>
                                     <div class="col-6 my-auto mx-auto text-center">
-                                        <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
+                                        <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
                                     </div>
                                 </div>
 
@@ -112,11 +112,11 @@
                             <a href="services-detail">
                                 <div class="row g-0">
                                     <div class="col-6 my-auto mx-auto text-center">
-                                        <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
+                                        <h3 class="text-brown lh-base mx-md-3"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
                                     </div>
                                     <div class="col-6">
                                         <div class="box-img">
-                                            <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
+                                            <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
                                         </div>
                                     </div>
                                 </div>

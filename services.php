@@ -47,20 +47,20 @@
             <?php foreach ($categoryList as $categoryDetail) : ?>
                 <div class="col-md-6 mb-3">
                     <div class="card mb-3 overflow-hidden h-100">
-                        <a href="services-detail?id=<?php echo $categoryDetail->id; ?>">
+                        <a href="services-detail?id=<?php echo $categoryDetail->id?><?php echo($langCurrent == null) ? '': '&'.$langCurrent; ?>">
                             <div class="box-img">
-                                <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
+                                <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
                             </div>
                             <div class="card-body text-left">
                                 <h3 class="text-brown lh-base mb-2">
-                                    <?php if (!empty( $_GET['lang'] ) && $_GET['lang'] == 'th') : ?>
+                                    <?php if (!empty( $_GET['lang'] ) && $_GET['lang'] == 'en') : ?>
                                         <?php echo  $categoryDetail->category_name; ?>
                                         <br>( <?php echo  $categoryDetail->category_name_en; ?> )
                                     <?php else : ?>
                                         <?php echo  $categoryDetail->category_name_en; ?>
                                     <?php endif ?>
                                 </h3>
-                                <h5 class="lh-base text-indent"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->description_en : $categoryDetail->description; ?></h5>
+                                <h5 class="lh-base text-indent"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $categoryDetail->description_en : $categoryDetail->description; ?></h5>
                             </div>
                         </a>
                     </div>
