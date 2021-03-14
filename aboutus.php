@@ -55,28 +55,6 @@
                                 <?php echo $aboutList[0]->about_name; ?></h1>
                             <h5 class="text-dark lh-base mb-3 text-indent">
                                 <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'en') ? $aboutList[0]->history_desc_en : $aboutList[0]->history_desc; ?>
-                                <!-- <p>
-                                    The company opened up. In 2004, working in the Insulation and Ducting Contractors.
-                                    Many years later, has grown to a widening of Insulation installation and Ducting
-                                    works until the present Good up company Limited There are a number of co-operating
-                                    partners have jointly grow and expand the scope of the contract. Example, the
-                                    overhaul work. Assembly machines Installation of equipment installed pipe hydraulic
-                                    pipe steam system. Ducting & ventilation system. The team with specialized
-                                    expertise. By the torch control of the company, Good up limited.
-                                </p>
-                                <p>
-                                    - Established on : 30 Nov 2004</p>
-                                <p> - Location at : 91 SoiRangsit - Nakronnayok 25 , TombonPrachatipat, <br>Amphur
-                                    Thanyaburi ,Pathumthani 12130</p>
-                                <p> - Telephone : <a href="tel:021995055">( 02 ) 199 - 5055</a> , <a
-                                        href="tel:0824379999">082-437-9999</a> , <a
-                                        href="tel:0849562222">084-956-2222</a></p>
-                                <p> - E – MAIL : goodup2001@gmail.com</p>
-                                <p> - Website : www.goodup.co.th</p>
-                                <p> - Register No : 0135547011222</p>
-                                <p> - Authorized capital : 3,000,000 Baht .</p>
-                                <p> - Bank Service : KASIKORN THAI PUBLIC COMPANY LIMITED.
-                                </p> -->
                             </h5>
                         </div>
                     </div>
