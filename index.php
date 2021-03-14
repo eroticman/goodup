@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="th">
 
 <head>
     <meta charset="utf-8" />
@@ -26,26 +26,45 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php 
+        include 'header.php'; 
+        include 'config/init.php';
+        $bannerList = banner_list();
+        $categoryList = category_list();
+    ?>
 
     <!-- Banner Slide -->
     <section class="">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <?php 
+                $i = 0;
+                foreach ($bannerList as $bannerDetail) :
+                $i++;
+            ?>
+                <?php if ($i == 1) : ?>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="$i" class="active"></li>
+                <?php else : ?>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="$i"></li>
+                <?php endif ?>
+            <?php endforeach ?>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="banner">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="banner">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="banner">
-                </div>
+            <?php 
+                $i = 0;
+                foreach ($bannerList as $bannerDetail) :
+                $i++;
+            ?>
+                <?php if ($i == 1) : ?>
+                    <div class="carousel-item active">
+                        <img src="img/banner/<?php echo $bannerDetail->id; ?>/<?php echo $bannerDetail->img_cover; ?>" class="d-block w-100" alt="<?php echo $bannerDetail->banner_name; ?>">
+                    </div>
+                <?php else : ?>
+                    <div class="carousel-item">
+                        <img src="img/banner/<?php echo $bannerDetail->id; ?>/<?php echo $bannerDetail->img_cover; ?>" class="d-block w-100" alt="<?php echo $bannerDetail->banner_name; ?>">
+                    </div>
+                <?php endif ?>
+            <?php endforeach ?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,79 +84,50 @@
                 <div class="col-12 text-center mb-3">
                     <h2 class="text-brown font-weight-bold">งานที่บริการ</h2>
                 </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-detail">
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <div class="box-img">
-                                        <img src="assets/images/services/img (2).jpg" alt="services">
+                <?php 
+                    $i == 0;
+                    foreach ($categoryList as $categoryDetail) : 
+                ?>
+                <?php if ($i %2 == 1) : ?>
+                    <div class="col-lg-6 col-12">
+                        <div class="card mb-3 overflow-hidden bg-gray">
+                            <a href="services-detail">
+                                <div class="row g-0">
+                                    <div class="col-6">
+                                        <div class="box-img">
+                                            <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 my-auto mx-auto text-center">
+                                        <h3 class="text-brown lh-base"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
                                     </div>
                                 </div>
-                                <div class="col-6 my-auto mx-auto text-center">
-                                    <h3 class="text-brown lh-base">หุ้มฉนวน&แจ็คเก็ต<br>
-                                        เพื่อกันความร้อน<br>
-                                        ความเย็น และเสียง</h3>
-                                </div>
-                            </div>
 
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-detail">
-                            <div class="row g-0">
-                                <div class="col-6 my-auto mx-auto text-center">
-                                    <h3 class="text-brown lh-base">ออกแบบ ตัดเย็บ<br>
-                                        หมอนผ้ากันไฟ<br>
-                                        ผ้าใบกันไฟ</h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-img">
-                                        <img src="assets/images/services/img (6).jpg" alt="services">
+                <?php else : ?>
+                    <div class="col-lg-6 col-12">
+                        <div class="card mb-3 overflow-hidden bg-gray">
+                            <a href="services-detail">
+                                <div class="row g-0">
+                                    <div class="col-6 my-auto mx-auto text-center">
+                                        <h3 class="text-brown lh-base"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="box-img">
+                                            <img src="img/category/<?php echo $categoryDetail->id; ?>/<?php echo $categoryDetail->img_cover; ?>" alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-detail">
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <div class="box-img">
-                                        <img src="assets/images/services/img (1).jpg" alt="services">
-                                    </div>
-                                </div>
-                                <div class="col-6 my-auto mx-auto text-center">
-                                    <h3 class="text-brown lh-base">ประกอบ ติดตั้ง<br>
-                                        ท่อดักท์ ท่อแอร์<br>
-                                        ท่อส่งระบายอากาศ
-                                    </h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card mb-3 overflow-hidden bg-gray">
-                        <a href="services-detail">
-                            <div class="row g-0">
-                                <div class="col-6 my-auto mx-auto text-center">
-                                    <h3 class="text-brown lh-base">ซ่อม ประกอบ<br>
-                                        ติดตั้ง เครื่องจักร</h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-img">
-                                        <img src="assets/images/services/img (5).jpg" alt="services">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <?php endif ?>
+                <?php
+                    $i++;
+                    endforeach 
+                ?>
             </div>
         </div>
     </section>

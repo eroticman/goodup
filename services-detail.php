@@ -1,11 +1,18 @@
+<?php 
+    include 'config/init.php';
+    $id = $_GET['id'];
+	$categoryDetail = category_detail($id);
+    $serviceList = service_list($id);
+?>
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="th">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>GoodUp - งามหุ้มฉนวน แจ็คเก็ต เพื่อกันความร้อน ความเย็นและเสียง</title>
-    <meta name="description" content="Goodup - งามหุ้มฉนวน แจ็คเก็ต เพื่อกันความร้อน ความเย็นและเสียง" />
+    <title>GoodUp - <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></title>
+    <meta name="description" content="Goodup - <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?>" />
+    <meta name="keywords" content="<?php echo  $categoryDetail->keyword; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
     <meta property="og:image" content="https://www.goodup.co.th/assets/images/logo.png" />
@@ -31,114 +38,54 @@
     <!-- Banner Slide -->
     <section class="header-text">
         <div class="container">
-            <h2 class="text-white">หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง</h2>
+            <h2 class="text-white"><?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $categoryDetail->category_name_en : $categoryDetail->category_name; ?></h2>
         </div>
     </section>
 
     <section class="aboutus margin-spacer py-md-5 py-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (18).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (18).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
+                <?php foreach ($serviceList as $serviceDetail) : ?>
+                    <div class="col-lg-4 col-md-6 col-12 mb-3">
+                        <div class="box-img overflow-hidden rounded detail shadow">
+                            <a title="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $serviceDetail->service_name_en : $serviceDetail->service_name; ?>"
+                                class="fancybox-pop fancybox.image" href="img/service/<?php echo $serviceDetail->id; ?>/<?php echo $serviceDetail->img_cover; ?>"
+                                rel="services-1">
+                                <img src="img/service/<?php echo $serviceDetail->id; ?>/<?php echo $serviceDetail->img_cover; ?>" class="img-fluid shadow zoom img-thumbnail"
+                                    alt="<?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $serviceDetail->service_name_en : $serviceDetail->service_name; ?>">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (19).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (19).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (20).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (20).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (21).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (21).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (22).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (22).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (23).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (23).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (24).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (24).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (25).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (25).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a title="หุ้มฉนวน&แจ็คเก็ต เพื่อกันความร้อน ความเย็น และเสียง"
-                            class="fancybox-pop fancybox.image" href="assets/images/services/img (26).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (26).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
+            <?php 
+                $total = service_count();
+
+                $pagination = pagination( $total->counter, 9);
+            ?>  
             <div class="row justify-content-center">
                 <div class="col-12 text-center mx-auto">
                     <div class="pagination d-inline-block">
-                        <a href="#">&laquo;</a>
-                        <a href="#">1</a>
-                        <a href="#" class="active">2</a>
-                        <a href="#">3</a>
-                        <a href="#" class="btn btn-link disabled">...</a>
-                        <a href="#" >10</a>
-                        <a href="#">&raquo;</a>
+                    <?php if ( $pagination['total'] > 0 ) : ?>
+                        <?php if ( $pagination['prev'] ) : ?>
+                            <a href="services-detail?id=<?php echo $_GET['id'] ?>&lang=<?php echo $_GET['lang'] ?>&page=<?php echo $pagination['prev']; ?>">&laquo;</a>
+                        <?php endif; ?>
+                            <?php for ( $i = 1; $i <= $pagination['total']; $i++ ) : ?>
+                                <?php 
+                                $page1 = $pagination['page'] - 2;
+                                $page2 = $pagination['page'] + 2;
+
+                                if ( ( $i == 1 ) or ( $i == $pagination['total'] ) or ( $i >= $page1 and $i <= $page2 ) ) :
+                                ?>
+                                    <a href="services-detail?id=<?php echo $_GET['id'] ?>&lang=<?php echo $_GET['lang'] ?>&page=<?php echo $i; ?>" class="<?php echo ($i == $pagination['page']) ? 'active' : ''; ?>"><?php echo $i; ?></a>
+                                <?php elseif ( ( ( $i > 1 ) and ( $i == ( $page1 - 1 ) ) ) or ( ( $i < $pagination['total'] ) and ( $i == ( $page2 + 1 ) ) ) ) : ?>
+                                    <a href="#">...</a>
+                                <?php endif ?>
+                            <?php endfor ?>
+                        <?php if ( $pagination['total'] != $pagination['page'] ) : ?>
+                                <a href="services-detail?id=<?php echo $_GET['id'] ?>&lang=<?php echo $_GET['lang'] ?>&page=<?php echo $pagination['next']; ?>">&raquo;</a>
+                        <?php endif ?>
+                    <?php endif ?>
                     </div>
                 </div>
             </div>

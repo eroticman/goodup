@@ -1,9 +1,17 @@
-Options +MultiViews
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
-RewriteRule ^/?show/([0-9]+)$ /show.php?id=$1
-
-RewriteCond %{HTTPS} off
+Options +MultiViews
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^/?show/([0-9]+)$ /show.php?id=$1
+
+
+
+RewriteCond %{HTTPS} off
+
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

@@ -1,0 +1,275 @@
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
+.padding-top-15 {
+    padding-top: 15px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.red {
+    color: red !important;
+}
+
+.green {
+    color: green !important;
+}
+
+.header {
+    border-bottom: 2px solid #dbbb5f;
+}
+
+.header h1 {
+    color: #dbbb5f;
+    padding-left: 15px;
+}
+
+#detail-car {
+    font-size: 16px;
+}
+
+.btn {
+    font-size: 16px;
+}
+
+.nav-link.active {
+    background-color: #dbbb5f !important;
+    color: #000 !important;
+    border-color: #dbbb5f !important;
+}
+
+.box {
+    margin: 15px 0;
+    /* padding: 0 15px 15px; */
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #dbbc5f31;
+    border: 1px solid rgb(167, 167, 167);
+    overflow: hidden;
+}
+
+.box .header-box {
+    background-color: #dbbb5f;
+    padding: 1px 15px;
+}
+
+.box .header-box h3 {
+    margin-top: 5px;
+    color: #fff;
+}
+
+.box .header-box h3>.btn {
+    font-size: 14px;
+}
+
+.detail-box {
+    font-size: 16px;
+    padding: 15px;
+}
+
+.detail-box .strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.mar-auto {
+    margin: auto !important;
+}
+
+.max-200 {
+    max-width: 250px;
+    width: 100%;
+}
+
+.table-secondary tr>td {
+    font-size: 18px;
+}
+
+.back-yellow {
+    background-color: #ffee00a8 !important;
+}
+
+.back-red {
+    background-color: #ff5b5b88 !important;
+}
+
+.yellow-check {
+    color: #ffc400 !important;
+}
+
+.sumtotal {
+    background-color: #ffee00a8 !important;
+    color: black !important;
+    padding-left: 10px !important;
+    border: rgb(0, 0, 0) !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+}
+
+.balance {
+    background-color: #f82020a8 !important;
+    color: black !important;
+    padding-left: 10px !important;
+    border: rgb(0, 0, 0) !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+}
+
+.gray-form {
+    background-color: #a5a5a557 !important;
+    color: black !important;
+    padding-left: 10px !important;
+    border: rgb(0, 0, 0) !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+}
+
+.edit-form {
+    float: right;
+    background-color: rgb(251, 255, 0);
+    margin-bottom: 0px !important;
+    border-radius: 5px;
+    color: #000;
+}
+
+.edit-form .form-check-label{
+    margin: 5px 10px !important;
+    right: 0;
+}
+
+
+
+/* ////////////////////////////// Print ///////////////////////////////// */
+@page {
+    size: auto;
+    margin: 0 auto;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    .padding-left-15 {
+        padding-left: 15px;
+    }
+
+    .btn-group {
+        display: none;
+    }
+
+    .nav-tabs {
+        display: none;
+    }
+
+    .page {
+        width: 21cm;
+        min-height: 29.7cm;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        padding: 1cm;
+        margin: 1cm auto;
+        border-radius: 5px;
+        background: white;
+    }
+
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .padding-top-30 {
+        padding-top: 0;
+    }
+
+    .detail-box tr>.nowrap {
+        white-space: nowrap !important;
+    }
+
+    .print-none {
+        display: none;
+    }
+
+    .box .header-box h3>.btn {
+
+        display: none;
+    }
+
+    .table-secondary {
+        background-color: darkgray !important;
+    }
+
+    .detail-box {
+        overflow-x: hidden !important;
+    }
+
+    .pad-print {
+        padding-left: 15px;
+    }
+}
+
+/* ////////////////////////////// Print ///////////////////////////////// */
+
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .mobile-none {
+        display: none;
+    }
+
+    .text-right {
+        text-align: center !important;
+    }
+
+    .header {
+        border-bottom: none;
+    }
+
+    .detail-box tr>.nowrap {
+        white-space: nowrap !important;
+    }
+
+    .padding-left-15-mb {
+        padding-left: 15px;
+    }
+
+    .detail-box .strong {
+        white-space: nowrap;
+    }
+
+    .max-200 {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px !important;
+    }
+
+    .box .header-box h3 {
+        font-size: 18px;
+    }
+
+    .btn-light {
+        padding: 2px 10px;
+    }
+
+    .page-content-form {
+        padding: 0 15px 0 20px;
+    }
+}

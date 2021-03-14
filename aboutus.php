@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="th">
 
 <head>
     <meta charset="utf-8" />
@@ -26,7 +26,12 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php 
+        include 'header.php'; 
+        include 'config/init.php';
+        $aboutList = about_list();
+        $aboutImgList  = about_img_list();
+    ?>
 
     <!-- Banner Slide -->
     <section class="header-text">
@@ -45,22 +50,9 @@
                     <div class="col-lg-7 my-auto">
                         <div class="p-lg-2 p-md-3 p-3">
                             <h3 class="lh-base mb-2 text-dark">ประวัติความเป็นมา</h3>
-                            <h1 class="lh-base mb-2 text-brown font-weight-bold">GOOD UP CO.,LTD.</h1>
+                            <h1 class="lh-base mb-2 text-brown font-weight-bold"><?php echo $aboutList[0]->about_name; ?></h1>
                             <h5 class="text-dark lh-base mb-3 text-indent">
-                                บริษัท กู๊ดอัพ จำกัด ก่อตั้งขึ้นเมื่อ 30 พฤศจิกายน 2547
-                                โดยเริ่มต้นจากธุรกิจรับเหมาหุ้มฉนวนกันความร้อน ความเย็น และกันเสียงงานเชื่อมประกอบท่อ
-                                การผลิตชิ้นส่วนต่างๆ หลากหลายรูปแบบ เพื่อนำมาใช้กับเครื่องจักรในงานอุตสาหกรรม
-                                ต่อมาได้ขยายงานเข้าสู่การบริการรับเหมา ดัดแปลง ซ่อมแซม และติดตั้งเครื่องจักรอย่างเต็มตัว
-                                พร้อมทั้งยังให้คำปรึกษาแก่ลูกค้าโดยวิศวกรที่ทรงคุณวุฒิและทีมงานที่มีประสบการณ์งานด้านอุตสาหกรรม
-                                มากกว่า 20 ปี โดยมีบริษัทที่เป็นพันธมิตรในการทำงานร่วมกันกับบริษัท กู๊ดอัพ จำกัด
-                                หลายบริษัทจึงทำให้บริษัท กู๊ดอัพ จำกัด สามารถบริการงานด้านต่างๆแก่ลูกค้าได้อย่างครอบคลุม
-                                ซึ่งลูกค้าสามารถมั่นใจได้ว่าจะได้รับการบริการที่สะดวก
-                                ครบวงจร ได้มาตรฐาน</h5>
-                            <h5 class="text-dark lh-base">
-                                วันที่จดทะเบียน : 30/11/2547<br>
-                                ทะเบียนนิติบุคคลเลขที่ : 0135547011222<br>
-                                ทุนจดทะเบียน : 3,000,000 บาท<br>
-                                สถาบันการเงินที่ใช้บริการ : ธนาคารกสิกรไทย
+                                <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $aboutList[0]->history_desc_en : $aboutList[0]->history_desc; ?>
                             </h5>
                         </div>
                     </div>
@@ -70,12 +62,9 @@
                 <div class="col-12">
                     <div class="card p-3 shadow rounded-lg">
                         <h3 class="text-brown lh-base mb-3 font-weight-bold">พันธกิจ (Mission)</h3>
-                        <h5 class="text-dark lh-base text-indent">บริษัท กู๊ดอัพ จำกัด
-                            มีความตั้งใจที่จะผลิตผลงานให้ออกมาอย่างมีคุณภาพ
-                            และปราศจากข้อผิดพลาดในทุกขั้นตอนการทำงาน
-                            เพื่อสร้างความพึงพอใจในด้านฝีมือการทำงานและการบริการขององค์กรให้กับผู้ว่าจ้าง
-                            โดยมุ่งเน้นถึงวิธีการทำงานที่ถูกต้องตามขั้นตอน
-                            และด้านความปลอดภัยในการปฏิบัติงานทั้งในโรงงานและนอกสถานที่</h5>
+                        <h5 class="text-dark lh-base text-indent">
+                            <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $aboutList[0]->mission_desc_en : $aboutList[0]->mission_desc; ?>
+                        </h5>
                     </div>
                 </div>
             </div>
@@ -83,71 +72,24 @@
                 <div class="col-12">
                     <div class="card p-3 shadow rounded-lg">
                         <h3 class="text-brown lh-base mb-3 font-weight-bold">นโยบาย (Policy)</h3>
-                        <h5 class="text-dark lh-base text-indent"> บริษัท กู๊ดอัพ จำกัด ได้ให้ความสำคัญกับงานทุกๆงาน
-                            และยังเน้นย้ำพนักงานทุกคน
-                            ให้ปฏิบัติงานอย่างมีคุณภาพ และอยู่ภายไต้กฎแห่งความปลอดภัยสูงสุด
-                            และถือว่าพนักงานทุกคนคือบุคลากรที่มีความสำคัญต่อองค์กรเท่าเทียมกัน
-                            ดังนั้นองค์กรจะต้องทำทุกวิถีทาง
-                            เพื่อให้พนักงานมีคุณภาพชีวิตที่ดี เพื่อสร้างสรรค์งานที่มีคุณภาพ
-                            เพื่อให้เกิดความพึงพอใจอย่างสูงสุดแก่ลูกค้า และ เพื่อความยั่งยืนขององค์กรตลอดไป</h5>
+                        <h5 class="text-dark lh-base text-indent">
+                            <?php echo (!empty( $_GET['lang'] ) and $_GET['lang'] == 'th') ? $aboutList[0]->policy_desc_en : $aboutList[0]->policy_desc; ?>
+                        </h5>
                     </div>
                 </div>
             </div>
             <div class="row">
+            <?php foreach ($aboutImgList as $aboutImgDetail) : ?>
                 <div class="col-lg-4 col-md-6 col-12 mb-3">
                     <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (61).jpg"
+                        <a class="fancybox-pop fancybox.image" href="img/about_us/<?php echo $aboutImgDetail->about_id; ?>/<?php echo $aboutImgDetail->img_name; ?>"
                             rel="services-1">
-                            <img src="assets/images/services/img (61).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
+                            <img src="img/about_us/<?php echo $aboutImgDetail->about_id; ?>/<?php echo $aboutImgDetail->img_name; ?>" class="img-fluid shadow zoom img-thumbnail"
+                                alt="<?php echo $aboutList[0]->about_name; ?>">
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (62).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (62).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (63).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (63).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (64).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (64).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (65).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (65).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="box-img overflow-hidden rounded detail shadow">
-                        <a class="fancybox-pop fancybox.image" href="assets/images/services/img (66).jpg"
-                            rel="services-1">
-                            <img src="assets/images/services/img (66).jpg" class="img-fluid shadow zoom img-thumbnail"
-                                alt="services">
-                        </a>
-                    </div>
-                </div>
+            <?php endforeach ?>
             </div>
         </div>
     </section>
